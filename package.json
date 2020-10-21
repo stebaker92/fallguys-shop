@@ -7,7 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "fallguys-api": "^1.1.0",
+    "fallguys-api": "^1.0.5",
     "gridsome": "^0.7.0"
   }
 }
