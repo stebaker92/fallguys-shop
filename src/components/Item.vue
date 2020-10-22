@@ -1,27 +1,21 @@
 <template>
-  <div class="item" :class="'item--' + item.node.rarity.toLowerCase()">
-    <div class="item__title">
-      <div class="item__rarity">
-        {{ item.node.rarity }}
+  <div class="item-container">
+    <div class="item" :class="'item--' + item.node.rarity.toLowerCase()">
+      <div class="item__title">
+        <div class="item__rarity">
+          {{ item.node.rarity }}
+        </div>
+        {{ item.node.name }}
       </div>
-      {{ item.node.name }}
-    </div>
 
-    <div class="item__body">
-      <img :src="item.node.icon.replace('-icon', '')" />
-      <div class="item__price">
-        <div
-          class="item__price-container"
-          v-if="item.node.currency === 'Crowns'"
-        >
-          <img :src="$context.crownIcon" alt="" srcset="" />
+      <div class="item__body">
+        <img :src="item.node.icon.replace('-icon', '')" />
+        <div v-if="item.node.currency === 'Crowns'" class="item__price-row">
+          <img :src="$context.crownIcon" class="item__price-icon" />
           {{ item.node.price }}
         </div>
-        <div
-          class="item__price-container"
-          v-if="item.node.currency === 'Kudos'"
-        >
-          <img :src="$context.kudosIcon" alt="" srcset="" />
+        <div v-if="item.node.currency === 'Kudos'" class="item__price-row">
+          <img :src="$context.kudosIcon" class="item__price-icon" />
           {{ item.node.price }}
         </div>
       </div>
@@ -45,20 +39,24 @@ export default {
 
 
 <style>
+.item-container {
+  border: 5px solid transparent;
+  border-radius: 22px;
+  margin: 1rem;
+}
+
+.item-container:hover {
+  border-color: #ffc700;
+}
+
 .item {
   position: relative;
   background-color: #45dbf4;
   border: 5px solid #fff;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-
-  margin: 1rem;
+  border-radius: 15px;
 }
 @media (max-width: 500px) {
-  .item {
+  .item-container {
     width: 100%;
     text-align: center;
   }
@@ -92,16 +90,13 @@ export default {
   padding: 1px 8px;
 }
 .item__title {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: var(--bg-title);
   font-family: titan one, Lato, Roboto, Calibri, Arial;
-  text-align: center;
   text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.5);
-  font-weight: 400;
 
-  border-bottom: 5px solid #fff;
-  border-bottom-width: 2px;
+  border-bottom: 2px solid #fff;
   padding: 0.5rem 4px 0.25rem;
   min-height: 68px;
   display: flex;
@@ -114,9 +109,6 @@ export default {
 }
 
 .item__body {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: baseline; */
   padding: 10px;
 }
 
@@ -127,12 +119,12 @@ export default {
   object-fit: cover;
 }
 
-.item__price img {
+.item__price-row img {
   width: 30px;
   height: 30px;
 }
 
-.item__price {
+.item__price-row {
   margin-top: 0.5rem;
   justify-content: center;
   display: flex;
@@ -145,11 +137,7 @@ export default {
   font-weight: 400;
 }
 
-.item__price-container {
-  display: flex;
-  align-items: center;
-}
-.item__price-container img {
+.item__price-row .item__price-icon {
   padding-right: 0.5rem;
 }
 </style>
