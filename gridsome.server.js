@@ -42,9 +42,16 @@ module.exports = function (api) {
     }
     `)
 
+    const featuredItemsLength = data.data.allDaily.edges.length;
+
+    if (!featuredItemsLength) {
+      console.error('No featured items found from Fall Guys API')
+      throw "No featured items found from Fall Guys API";
+    }
+
     const crownIcon = fallguys.crownIcon;
     const kudosIcon = fallguys.kudosIcon;
-
+    
     createPage({
       path: '/today',
       component: './src/templates/ShopPage.vue',
