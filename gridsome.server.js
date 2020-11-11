@@ -52,7 +52,8 @@ module.exports = function (api) {
       {
         crownIcon: crownIcon,
         kudosIcon: kudosIcon,
-        items: data.data.allDaily.edges
+        items: data.data.allDaily.edges,
+        updatedDate: new Date()
       }
     })
 
