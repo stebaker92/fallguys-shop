@@ -1,4 +1,5 @@
 # Default starter for Gridsome
+[![Netlify Status](https://api.netlify.com/api/v1/badges/02bf4950-0f65-452d-b4ad-8a7974c03373/deploy-status)](https://app.netlify.com/sites/fallguys-shop/deploys)
 
 This is the project you get when you run `gridsome create new-project`.
 
