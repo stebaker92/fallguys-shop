@@ -1,15 +1,11 @@
-# Default starter for Gridsome
+# Fall Guys Web Shop 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/02bf4950-0f65-452d-b4ad-8a7974c03373/deploy-status)](https://app.netlify.com/sites/fallguys-shop/deploys)
 
-This is the project you get when you run `gridsome create new-project`.
+A website that displays the latest 'Featured Items' in the in-game shops for the popular video-game Fall Guys
 
-### 1. Install Gridsome CLI tool if you don't have
+[https://fallguys-shop.netlify.app/today/](https://fallguys-shop.netlify.app/today/)
 
-`npm install --global @gridsome/cli`
+## Running Locally
 
-### 2. Create a Gridsome project
+Run `gridsome develop` to start a local dev server at `http://localhost:8080`
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
