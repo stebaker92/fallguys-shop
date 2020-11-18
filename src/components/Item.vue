@@ -116,7 +116,7 @@ export default {
   border-radius: 15px;
   width: 175px;
   height: 175px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .item__price-row img {
