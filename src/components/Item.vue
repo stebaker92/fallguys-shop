@@ -62,6 +62,11 @@ export default {
   }
 }
 
+.item--uncommon {
+  --bg-rarity: #2bbdff;
+  --border-rarity: #4b99ce;
+  --bg-title: #5abdff;
+}
 .item--legendary {
   --bg-rarity: #f1911b;
   --border-rarity: #d27517;
