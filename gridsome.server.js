@@ -53,7 +53,7 @@ module.exports = function (api) {
     const kudosIcon = fallguys.kudosIcon;
     
     createPage({
-      path: '/today',
+      path: '/',
       component: './src/templates/ShopPage.vue',
       context:
       {
