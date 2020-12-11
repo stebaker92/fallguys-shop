@@ -9,7 +9,9 @@
       </div>
 
       <div class="item__body">
-        <img :src="item.node.icon.replace('-icon', '')" />
+        <img v-if="item.node.icon" :src="item.node.icon.replace('-icon', '')" />
+        <div v-if="!item.node.icon" class="item__img-placeholder"></div>
+
         <div v-if="item.node.currency === 'Crowns'" class="item__price-row">
           <img :src="$context.crownIcon" class="item__price-icon" />
           {{ item.node.price }}
@@ -117,7 +119,8 @@ export default {
   padding: 10px;
 }
 
-.item__body > img {
+.item__body > img,
+.item__body > .item__img-placeholder {
   border-radius: 15px;
   width: 175px;
   height: 175px;
