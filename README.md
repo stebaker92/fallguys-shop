@@ -3,7 +3,7 @@
 
 A website that displays the latest 'Featured Items' in the in-game shops for the popular video-game Fall Guys
 
-[https://fallguys-shop.netlify.app/today/](https://fallguys-shop.netlify.app/today/)
+[https://fallguys-shop.netlify.app/](https://fallguys-shop.netlify.app/)
 
 ## Running Locally
 
