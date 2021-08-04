@@ -5,6 +5,7 @@
     <div class="items__description">
       Todays currently featured items for Fall Guys. Updates every few days!
     </div>
+    
     <div class="items__last-updated">Last updated {{ dateFormatted }}</div>
 
     <div class="items__container">
@@ -32,8 +33,6 @@ export default {
 </script>
 
 <style>
-.layout {
-}
 .items__last-updated {
   font-weight: 600;
 }
