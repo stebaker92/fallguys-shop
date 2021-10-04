@@ -26,20 +26,20 @@ module.exports = function (api) {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
 
     const data = await graphql(`
-    query{
-      allDaily{
-        edges{
-          node{
-            uid
-            name
-            rarity
-            icon
-            price
-            currency
+      query{
+        allDaily{
+          edges{
+            node{
+              uid
+              name
+              rarity
+              icon
+              price
+              currency
+            }
           }
         }
       }
-    }
     `)
 
     const featuredItemsLength = data.data.allDaily.edges.length;
@@ -49,20 +49,17 @@ module.exports = function (api) {
       throw "No featured items found from Fall Guys API";
     }
 
-    const crownIcon = fallguys.crownIcon;
-    const kudosIcon = fallguys.kudosIcon;
+    const { crownIcon, kudosIcon } = fallguys;
     
     createPage({
       path: '/',
       component: './src/templates/ShopPage.vue',
-      context:
-      {
-        crownIcon: crownIcon,
-        kudosIcon: kudosIcon,
+      context: {
+        crownIcon,
+        kudosIcon,
         items: data.data.allDaily.edges,
         updatedDate: new Date()
       }
     })
-
   })
 }
