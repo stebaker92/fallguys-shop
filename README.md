@@ -9,3 +9,4 @@ A website that displays the latest 'Featured Items' in the in-game shops for the
 
 Run `gridsome develop` to start a local dev server at `http://localhost:8080`
 
+![image](https://user-images.githubusercontent.com/11291329/135936012-175cf3cf-f548-43b1-b6ed-7ffe75618781.png)
