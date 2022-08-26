@@ -1,0 +1,16 @@
+name: Daily netlify deploy
+on:
+  schedule:
+    - cron:  '34 20 * * *' # every day, utc 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    # We don't need to build
+    # just trigger the netlify build task
+    
+    - run: curl -X POST -d {} https://api.netlify.com/build_hooks/5fac0692f8c92e0fd12cc036
