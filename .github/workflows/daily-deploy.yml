@@ -1,7 +1,7 @@
 name: Daily netlify deploy
 on:
   schedule:
-    - cron:  '20 14 * * *' # every day, utc 
+    - cron:  '26 14 * * *' # every day, utc 
 
 jobs:
   build:
