@@ -1,7 +1,7 @@
 name: Daily netlify deploy
 on:
   schedule:
-    - cron:  '00 12 * * *' # every day, utc 
+    - cron:  '20 14 * * *' # every day, utc 
 
 jobs:
   build:
@@ -11,4 +11,4 @@ jobs:
     - uses: actions/checkout@v3
     
     # We don't need to build here, just trigger our netlify build task
-    - run: curl -X POST -d {} $NETLIFY_WEBHOOK_URL
+    - run: curl -X POST -d {} "$NETLIFY_WEBHOOK_URL"
