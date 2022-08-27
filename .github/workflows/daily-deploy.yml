@@ -6,9 +6,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
     - uses: actions/checkout@v3
     
-    # We don't need to build here, just trigger our netlify build task
-    - run: curl -X POST -d {} "$NETLIFY_WEBHOOK_URL"
+    - name: Trigger Netlify build webhook
+      env:
+        NETLIFY_WEBHOOK_URL: ${{ secrets.SECRET_TOKEN }}
+      run: curl -X POST -d {} "$NETLIFY_WEBHOOK_URL"
