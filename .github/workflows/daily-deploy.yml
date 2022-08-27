@@ -2,6 +2,9 @@ name: Daily netlify deploy
 on:
   schedule:
     - cron:  '26 14 * * *' # every day, utc 
+  push:
+    branches: 
+    - master
 
 jobs:
   build:
@@ -12,5 +15,5 @@ jobs:
     
     - name: Trigger Netlify build webhook
       env:
-        NETLIFY_WEBHOOK_URL: ${{ secrets.SECRET_TOKEN }}
+        NETLIFY_WEBHOOK_URL: ${{ secrets.NETLIFY_WEBHOOK_URL }}
       run: curl -X POST -d {} "$NETLIFY_WEBHOOK_URL"
