@@ -13,4 +13,4 @@ jobs:
     # We don't need to build
     # just trigger the netlify build task
     
-    - run: curl -X POST -d {} https://api.netlify.com/build_hooks/5fac0692f8c92e0fd12cc036
+    - run: curl -X POST -d {} $NETLIFY_WEBHOOK_URL
