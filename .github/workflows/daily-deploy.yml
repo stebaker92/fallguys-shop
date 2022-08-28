@@ -14,4 +14,4 @@ jobs:
     - name: Trigger Netlify build
       env:
         WEBHOOK_URL: ${{ secrets.NETLIFY_WEBHOOK_URL }}
-      run: curl -X POST -d {} "$WEBHOOK_URL"
+      run: curl -X POST -d {} "$WEBHOOK_URL" --fail
