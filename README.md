@@ -3,7 +3,7 @@
 
 [![Netlify Build Status](https://api.netlify.com/api/v1/badges/02bf4950-0f65-452d-b4ad-8a7974c03373/deploy-status)](https://app.netlify.com/sites/fallguys-shop/deploys)
 
-A website that displays the latest 'Featured Items' in the in-game shops for the popular video-game Fall Guys
+A website that displays the latest 'Featured Items' in the in-game shops for the popular video-game 'Fall Guys'. Built and deployed daily via Github Actions and Netlify
 
 [https://fallguys-shop.netlify.app/](https://fallguys-shop.netlify.app/)
 
