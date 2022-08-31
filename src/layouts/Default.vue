@@ -47,6 +47,7 @@ body {
 
 .header img {
   height: 25px;
+  width: unset;
 }
 
 .nav__link {
