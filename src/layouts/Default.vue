@@ -1,8 +1,7 @@
 <template>
   <div>
     <header class="header">
-      <div>Fall Guys Item Shop</div>
-      <img src="logo.webp" alt="logo" />
+      <img src="~/logo.webp" alt="logo" />
     </header>
     <div class="layout">
       <slot />
