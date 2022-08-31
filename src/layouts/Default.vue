@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="header">
-      <img src="~/logo.webp" alt="logo" />
+      <g-image src="~/logo.webp" alt="logo" />
     </header>
     <div class="layout">
       <slot />
