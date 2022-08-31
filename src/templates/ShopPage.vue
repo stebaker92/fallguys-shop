@@ -3,10 +3,10 @@
     <h1>Featured Items</h1>
 
     <div class="items__description">
-      Todays currently featured items for Fall Guys. Updates every few days!
+      Todays featured items for Fall Guys. Updates every few days!
     </div>
     
-    <div class="items__last-updated">Last updated {{ dateFormatted }}</div>
+    <div class="items__last-updated">Last updated on {{ dateFormatted }}</div>
 
     <div class="items__container">
       <Item v-for="item in $context.items" :key="item.uid" :item="item"></Item>
