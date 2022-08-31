@@ -2,13 +2,7 @@
   <div>
     <header class="header">
       <div>Fall Guys Item Shop</div>
-      <!-- <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong> -->
-      <!-- <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav> -->
+      <img src="logo.webp" alt="logo" />
     </header>
     <div class="layout">
       <slot />
@@ -45,12 +39,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-bottom: 20px; */
   height: 50px;
   background-color: black;
   color: white;
   text-align: center;
   justify-content: center;
+}
+
+.header img {
+  height: 25px;
 }
 
 .nav__link {
